@@ -149,7 +149,7 @@ async def start(update: Update, context: CustomContext) -> None:
     """Send a message when the command /start is issued."""
     user_name = update.message.chat.first_name
     logger.info({"id": update.effective_chat.id, "username": user_name, "category": "logged_in", "label": "logged_in"})
-    await send_message_to_bot(update.effective_chat.id, f"Namaste 🙏\nWelcome to ECD AI :Early Child Development AI", context)
+    await send_message_to_bot(update.effective_chat.id, f"Namaste 🙏\nWelcome to Prayas : Prayas AI", context)
     await language_handler(update, context)
 
 
@@ -190,7 +190,7 @@ async def bot_handler(update: Update, context: CustomContext):
     inline_keyboard_buttons = [
         # [InlineKeyboardButton(button_labels["story"], callback_data='botname_story')],
         # [InlineKeyboardButton(button_labels["teacher"], callback_data='botname_teacher')
-        [InlineKeyboardButton(button_labels["early_child_development_bot"], callback_data='botname_early_child_development_bot')]]
+        [InlineKeyboardButton(button_labels["prayas"], callback_data='botname_prayas')]]
     reply_markup = InlineKeyboardMarkup(inline_keyboard_buttons)
     text_message = getMessage(update, context, LANGUAGE_SELCTION)
     await context.bot.send_message(chat_id=update.effective_chat.id, text=text_message, reply_markup=reply_markup, parse_mode="Markdown")
