@@ -149,7 +149,7 @@ async def start(update: Update, context: CustomContext) -> None:
     """Send a message when the command /start is issued."""
     user_name = update.message.chat.first_name
     logger.info({"id": update.effective_chat.id, "username": user_name, "category": "logged_in", "label": "logged_in"})
-    await send_message_to_bot(update.effective_chat.id, f"Namaste 🙏\nWelcome to ECD AI :Early Child Development AI", context)
+    await send_message_to_bot(update.effective_chat.id, f"Namaste 🙏\nWelcome to Adhyayan Teacher AI", context)
     await language_handler(update, context)
 
 
@@ -190,7 +190,7 @@ async def bot_handler(update: Update, context: CustomContext):
     inline_keyboard_buttons = [
         # [InlineKeyboardButton(button_labels["story"], callback_data='botname_story')],
         # [InlineKeyboardButton(button_labels["teacher"], callback_data='botname_teacher')
-        [InlineKeyboardButton(button_labels["early_child_development_bot"], callback_data='botname_early_child_development_bot')]]
+        [InlineKeyboardButton(button_labels["adhyayan_teacher"], callback_data='botname_adhyayan_teacher')]]
     reply_markup = InlineKeyboardMarkup(inline_keyboard_buttons)
     text_message = getMessage(update, context, LANGUAGE_SELCTION)
     await context.bot.send_message(chat_id=update.effective_chat.id, text=text_message, reply_markup=reply_markup, parse_mode="Markdown")
@@ -328,12 +328,13 @@ async def handle_query_response(update: Update, context: CustomContext, query: s
         logger.info({"id": update.effective_chat.id, "username": update.effective_chat.first_name,
                      "category": "handle_query_response", "label": "answer_received", "value": query})
         answer = response['output']["text"]
+        
         keyboard = [
             [InlineKeyboardButton("👍🏻", callback_data=f'message-liked__{update.message.id}'),
              InlineKeyboardButton("👎🏻", callback_data=f'message-disliked__{update.message.id}')]
         ]
         reply_markup = InlineKeyboardMarkup(keyboard)
-        await context.bot.send_message(chat_id=update.effective_chat.id, text=answer, parse_mode="Markdown")
+        await context.bot.send_message(chat_id=update.effective_chat.id, text=answer)
         await context.bot.send_message(chat_id=update.effective_chat.id, text="Please provide your feedback", parse_mode="Markdown", reply_markup=reply_markup)
         if response['output']["audio"]:
             audio_output_url = response['output']["audio"]
