@@ -192,7 +192,7 @@ BOT_NAME = {
 
 BOT_SELECTION = {
     "en": {
-        "eco-activity": """
+        "cyberguard_assistant": """
 Wecome to *CyberGuard Assistant!*
 I can provide you with essential cybersecurity practices, insights on data protection, best practices for secure online transactions, and guidance on preventing ransomware threats.
 
