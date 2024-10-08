@@ -4,8 +4,8 @@ TELEGRAM_PDATA_ID = "ejp.sakhi.api.service"
 
 LANGUAGE_SELCTION = {
     "en": """
-**CyberGuard Assistant**
-I am here to help users understand and implement cybersecurity practices focused on data protection, safe online transactions, and ransomware defense.
+**Eco-Assistant**
+I am here  textile manufacturers with eco-labelling guidance for sustainable textile production.
 """
 #     "hi": """
 # **उम्मीद एआई**
@@ -52,8 +52,8 @@ I am here to help users understand and implement cybersecurity practices focused
 
 BOT_NAME = {
     "en": {
-        "cyberguard_assistant" : "CyberGuard Assistant"
-        # "eco-activity": "Eco-Assistant"
+        # "cyberguard_assistant" : "CyberGuard Assistant"
+        "eco-activity": "Eco-Assistant"
         # "teacher": "Teacher Tara",
         # "parent": "Parent Tara",
         # "early_child_development_bot": "ECD AI",
@@ -192,17 +192,17 @@ BOT_NAME = {
 
 BOT_SELECTION = {
     "en": {
-        "cyberguard_assistant": """
-Wecome to *CyberGuard Assistant!*
-I can provide you with essential cybersecurity practices, insights on data protection, best practices for secure online transactions, and guidance on preventing ransomware threats.
+        "eco-activity": """
+Wecome to *Eco-Assistant!*
+I can provide you with expert guidance on sustainable textile production, eco-labelling processes, chemical safety, and advice on reducing environmental impacts in the textile industry.
 
 Here are a few examples of what you can ask:
 
-What are the best practices for secure online transactions?
-How can I protect my data from unauthorized access?
-What steps should I take if I encounter ransomware like BadRabbit?
-What is the importance of employee awareness in cybersecurity?
-Feel free to ask your cybersecurity-related questions!
+What are the steps to obtain an eco-label for textile products?
+How can I substitute harmful chemicals in textile processing?
+What are the environmental benefits of using hydrogen peroxide in bleaching?
+How can I optimize my textile production process to reduce water and energy usage?
+Feel free to ask for guidance on any aspect of eco-friendly textile manufacturing!
 
         """
 #         "teacher": """
